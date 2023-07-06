@@ -41,7 +41,13 @@ class App(customtkinter.CTk):
 
 
     def btn_sumar_on_click(self):
-        pass
+        Numero1 = int(self.txt_operador_a.get()) 
+        """primera forma simplificada"""
+        Numero2texto = (self.txt_operador_b.get())
+        Numero2numero = int(Numero2texto)
+        """Segunda forma"""
+        SUMA = Numero1 + Numero2numero
+        alert(title="Resultado", message= f"El resultado es {SUMA}")
      
         
 if __name__ == "__main__":

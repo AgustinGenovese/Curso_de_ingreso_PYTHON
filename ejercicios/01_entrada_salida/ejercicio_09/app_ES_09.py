@@ -40,8 +40,11 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        pass
-        
+        Sueldo_Antiguo = int(self.txt_sueldo.get()) 
+        Incremento = int(self.txt_incremento.get())
+        Porcentaje_Incremento = (Incremento / Sueldo_Antiguo) * 100
+        Sueldo_Final = Sueldo_Antiguo + Porcentaje_Incremento
+        alert(title="", message= f"El Sueldo final {Sueldo_Final}")       
     
 if __name__ == "__main__":
     app = App()
